@@ -1,0 +1,30 @@
+# YAML forbids tabs in indentation, hence spaces throughout this file.
+name: 'CI'
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+
+concurrency:
+  group: 'ci-${{ github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: 'Validate theme assets'
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: 'actions/checkout@v7'
+
+      - name: 'Install xmllint'
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libxml2-utils
+
+      - name: 'Validate SVG files are well-formed XML'
+        run: find . -name '*.svg' -print0 | xargs -0 xmllint --noout
+
+      - name: 'Validate metadata.json files'
+        run: find . -name 'metadata.json' -print0 | xargs -0 -n 1 jq empty
+
+      - name: 'Validate INI-style files (colors, metadata.desktop, plasmarc)'
+        run: python3 .github/scripts/validate-ini.py
