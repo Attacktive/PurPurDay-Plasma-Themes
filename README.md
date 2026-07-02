@@ -1,3 +1,16 @@
+# Vulgar Display of Purple
+
+A fork of [PurPurDay-Plasma-Themes](https://github.com/L4ki/PurPurDay-Plasma-Themes) by l4k1, modified by Attacktive on 2026-07-02. Licensed under GPL-3.0, same as upstream.
+
+Changes from upstream, all in the Plasma theme (renamed to "Vulgar Display of Purple"):
+
+- The task manager focus/hover indicators now tint the whole task button with a translucent fill (purple for focus, red for hover) instead of a thin 3px line
+- The `[Colors:Complementary]` color group is rebuilt with proper dark-overlay values — upstream ships light background/near-black text there, which makes text on dark overlay surfaces (e.g. the logout screen) illegible
+
+The original README follows.
+
+---
+
 # PurPurDay-Plasma-Themes
 PurPurDay Themes For Plasma Desktop
 

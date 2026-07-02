@@ -1,0 +1,27 @@
+{
+	"KPackageStructure": "Plasma/Theme",
+	"KPlugin": {
+		"Authors": [
+			{
+				"Email": "l4k1987@gmail.com",
+				"Name": "l4k1"
+			},
+			{
+				"Email": "tribute2pantera@gmail.com",
+				"Name": "Attacktive"
+			}
+		],
+		"Category": "Plasma Theme",
+		"ServiceTypes": [
+			"Plasma/Theme"
+		],
+		"EnabledByDefault": true,
+		"Name": "Vulgar Display of Purple",
+		"Description": "A vulgar display of purple — PurPurDay-Plasma with loud task manager focus/hover tints and readable Complementary colors. Fork of PurPurDay-Plasma 5.3 by l4k1.",
+		"Id": "Vulgar-Display-of-Purple",
+		"Version": "1.0",
+		"License": "GPL-3.0+",
+		"Website": "https://github.com/Attacktive/PurPurDay-Plasma-Themes"
+	},
+	"X-Plasma-API": "5.0"
+}
